@@ -15,12 +15,12 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
   color: white;
 }
 
@@ -37,6 +37,38 @@
   }
 }
 
+.App-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+}
+
 .map {
-  height: 80vh;
+  display: flex;
+  height: 90vh;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.menu-sidebar {
+  height: 90vh;
+  width: 15vw;
+  background-color: #525859;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  /* justify-content: center; */
+}
+
+.popup-item {
+  display: flex;
+  background-color: #525859;
+  z-index: 1500;
+  position: absolute;
+  align-items: center;
+  width: 30vw;
+  height: 20vh;
 }
