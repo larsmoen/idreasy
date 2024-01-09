@@ -1,6 +1,7 @@
 {
   "name": "idreasy",
   "version": "0.1.0",
+  "homepage": "https://larsmoen.github.io/idreasy/",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.11.3",
