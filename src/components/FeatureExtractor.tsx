@@ -39,7 +39,7 @@ const FeatureExtractor: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       });
       setProperties(Array.from(propertyNames));
     }
-  }, [selectedLayer, layers]);
+  }, [selectedLayer, layers, newLayerName]);
 
   const handleExtract = useCallback(() => {
     const layer = layers.find((layer) => layer.name === selectedLayer);
@@ -167,7 +167,11 @@ const FeatureExtractor: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         />
       </Box>
 
-      <Button onClick={handleExtract} variant="contained">
+      <Button
+        onClick={handleExtract}
+        variant="contained"
+        style={{ backgroundColor: "#282c34" }}
+      >
         Extract
       </Button>
     </BaseModal>

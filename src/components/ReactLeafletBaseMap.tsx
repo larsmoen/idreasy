@@ -27,11 +27,11 @@ const ReactLeafletBaseMap: React.FC = () => {
     <MapContainer
       center={position}
       zoom={12}
-      style={{ height: "100vh", width: "100%" }}
+      style={{ height: "90vh", width: "100%" }}
     >
       <TileLayer
         url="https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}"
-        attribution='<a href="http://www.kartverket.no/">Kartverket</a>'
+        attribution='&copy; <a href="http://www.kartverket.no/">Kartverket</a>'
       />
       {layers.map(
         (layer, index) =>

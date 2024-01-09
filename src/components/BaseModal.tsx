@@ -29,7 +29,7 @@ const BaseModal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     >
       <Box sx={ModalStyle}>
         {children}
-        <Button onClick={handleClose} sx={{ my: 2 }}>
+        <Button onClick={handleClose} sx={{ my: 2, color: "red" }}>
           {/* {t("baseModalClose")} */}
           Close
         </Button>

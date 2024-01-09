@@ -131,7 +131,11 @@ const Union: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
           sx={{ my: 2 }}
         />
       </Box>
-      <Button onClick={handleUnion} variant="contained">
+      <Button
+        onClick={handleUnion}
+        variant="contained"
+        style={{ backgroundColor: "#282c34" }}
+      >
         Create Union Layer
       </Button>
     </BaseModal>

@@ -109,7 +109,11 @@ const Difference: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         />
       </Box>
 
-      <Button onClick={handleDifference} variant="contained">
+      <Button
+        onClick={handleDifference}
+        variant="contained"
+        style={{ backgroundColor: "#282c34" }}
+      >
         Calculate Difference
       </Button>
     </BaseModal>

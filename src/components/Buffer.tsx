@@ -86,7 +86,11 @@ const Buffer: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         />
       </Box>
 
-      <Button onClick={handleBuffer} variant="contained">
+      <Button
+        onClick={handleBuffer}
+        variant="contained"
+        style={{ backgroundColor: "#282c34" }}
+      >
         Create Buffer
       </Button>
     </BaseModal>

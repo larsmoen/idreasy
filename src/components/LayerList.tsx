@@ -4,6 +4,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { VisibilityOffTwoTone, VisibilityTwoTone } from "@mui/icons-material";
 import DownloadIcon from "@mui/icons-material/GetApp"; // Icon for download
 import Switch from "@mui/material/Switch";
 import useLanguage from "../hook/useLanguage";
@@ -38,13 +39,11 @@ const LayerList: React.FC = () => {
         {layers.map((layer, index) => (
           <ListItem key={layer.name || index.toString()}>
             <ListItemText primary={layer.name} />
-            <Switch
-              checked={layer.visible}
-              onChange={(e) =>
-                handleVisibilityChange(layer.name, e.target.checked)
-              }
-              edge="end"
-            />
+            <IconButton
+              onClick={() => handleVisibilityChange(layer.name, !layer.visible)}
+            >
+              {layer.visible ? <VisibilityTwoTone /> : <VisibilityOffTwoTone />}
+            </IconButton>
             <IconButton
               edge="end"
               aria-label="download"

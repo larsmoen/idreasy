@@ -105,7 +105,11 @@ const Intersect: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         />
       </Box>
 
-      <Button onClick={handleIntersect} variant="contained">
+      <Button
+        onClick={handleIntersect}
+        variant="contained"
+        style={{ backgroundColor: "#282c34" }}
+      >
         Intersect
       </Button>
     </BaseModal>

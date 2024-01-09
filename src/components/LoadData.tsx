@@ -71,8 +71,13 @@ const LoadData: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           Upload Data
           {/* {t("loadDataTitle")} */}
         </Typography>
-        <Button component="label" variant="contained">
-          {t("loadDataButton")}
+        <Button
+          component="label"
+          variant="contained"
+          style={{ backgroundColor: "#282c34" }}
+        >
+          {/* {t("loadDataButton")} */}
+          Choose File(s)
           <VisuallyHiddenInput
             type="file"
             accept=".json, .geojson"
