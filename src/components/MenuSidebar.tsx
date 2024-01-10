@@ -13,8 +13,7 @@ const MenuSidebar: React.FC<MenuSidebarProps> = ({ onMenuItemClick }) => {
   const [collapsed, setCollapsed] = React.useState(false);
   const [rtl, setRtl] = React.useState(false);
 
-  // console.log("Current language:", language);
-
+  // Handle if the sidebar is on the left or the right hand side of the screen
   const handleRTLChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRtl(event.target.checked);
   };

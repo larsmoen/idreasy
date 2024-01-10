@@ -25,9 +25,11 @@ const LoadData: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const { addLayer } = useFiles(); // Updated to use addLayer for the Layer interface
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // Check if files were uploaded
     if (event.target.files) {
       const fileList = Array.from(event.target.files);
 
+      // Read each file
       fileList.forEach((file) => {
         const reader = new FileReader();
         reader.onload = (e) => {
@@ -46,7 +48,7 @@ const LoadData: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               name: fileNameWithoutExtension,
               data: geoJson,
               visible: true, // Default visibility
-              style: {}, // Default style, customize as needed
+              style: {}, // Default style i.e. blue colour
             };
 
             addLayer(newLayer);

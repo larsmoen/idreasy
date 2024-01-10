@@ -7,8 +7,9 @@ import L from "leaflet";
 
 const ReactLeafletBaseMap: React.FC = () => {
   const position: [number, number] = [63.42, 10.4];
-  const { layers } = useFiles(); // Updated to use the geoJsonFiles
+  const { layers } = useFiles(); // Get the layers from the FileContext
 
+  // This function is used to style Point features
   const pointToLayer = (feature: Feature, latlng: L.LatLng): L.Layer => {
     if (feature.geometry.type === "Point") {
       return L.circleMarker(latlng, {
@@ -33,6 +34,8 @@ const ReactLeafletBaseMap: React.FC = () => {
         url="https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}"
         attribution='&copy; <a href="http://www.kartverket.no/">Kartverket</a>'
       />
+
+      {/* Add each saved Layer object to the map and show them if visible is true */}
       {layers.map(
         (layer, index) =>
           layer.visible && (

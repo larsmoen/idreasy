@@ -19,9 +19,10 @@ const LayerList: React.FC = () => {
     updateLayerVisibility(layerName, isVisible);
   };
 
+  // Download layer data as GeoJSON
   const downloadLayer = (layer: Layer) => {
     const layerDataStr = JSON.stringify(layer.data, null, 2);
-    const blob = new Blob([layerDataStr], { type: "application/json" });
+    const blob = new Blob([layerDataStr], { type: "application/geo+json" });
     const href = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = href;
@@ -39,11 +40,15 @@ const LayerList: React.FC = () => {
         {layers.map((layer, index) => (
           <ListItem key={layer.name || index.toString()}>
             <ListItemText primary={layer.name} />
+
+            {/* Visibility toggle */}
             <IconButton
               onClick={() => handleVisibilityChange(layer.name, !layer.visible)}
             >
               {layer.visible ? <VisibilityTwoTone /> : <VisibilityOffTwoTone />}
             </IconButton>
+
+            {/* Download button */}
             <IconButton
               edge="end"
               aria-label="download"
@@ -51,6 +56,8 @@ const LayerList: React.FC = () => {
             >
               <DownloadIcon />
             </IconButton>
+
+            {/* Delete button */}
             <IconButton
               edge="end"
               aria-label="delete"

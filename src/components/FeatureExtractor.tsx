@@ -41,6 +41,7 @@ const FeatureExtractor: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     }
   }, [selectedLayer, layers, newLayerName]);
 
+  // Function to handle feature extraction
   const handleExtract = useCallback(() => {
     const layer = layers.find((layer) => layer.name === selectedLayer);
     if (!layer) {
