@@ -24,31 +24,41 @@ const MenuSidebar: React.FC<MenuSidebarProps> = ({ onMenuItemClick }) => {
       <Sidebar collapsed={collapsed} rtl={rtl} rootStyles={{ height: "100vh" }}>
         <Menu>
           <MenuItem
-            component={<Link to="load-data" onClick={onMenuItemClick} />}
+            component={
+              <Link to="idreasy/load-data" onClick={onMenuItemClick} />
+            }
           >
             {/* {t("loadData")} */}
             Upload Data
           </MenuItem>
           <MenuItem
             component={
-              <Link to="feature-extraction" onClick={onMenuItemClick} />
+              <Link to="idreasy/feature-extraction" onClick={onMenuItemClick} />
             }
           >
             Feature Extractor
           </MenuItem>
-          <MenuItem component={<Link to="union" onClick={onMenuItemClick} />}>
+          <MenuItem
+            component={<Link to="idreasy/union" onClick={onMenuItemClick} />}
+          >
             Union
           </MenuItem>
           <MenuItem
-            component={<Link to="intersect" onClick={onMenuItemClick} />}
+            component={
+              <Link to="idreasy/intersect" onClick={onMenuItemClick} />
+            }
           >
             Intersect
           </MenuItem>
-          <MenuItem component={<Link to="buffer" onClick={onMenuItemClick} />}>
+          <MenuItem
+            component={<Link to="idreasy/buffer" onClick={onMenuItemClick} />}
+          >
             Buffer
           </MenuItem>
           <MenuItem
-            component={<Link to="difference" onClick={onMenuItemClick} />}
+            component={
+              <Link to="idreasy/difference" onClick={onMenuItemClick} />
+            }
           >
             Difference
           </MenuItem>

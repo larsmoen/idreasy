@@ -17,7 +17,7 @@ const BaseModal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   const navigate = useNavigate();
   const handleClose = () => {
     onClose(); // Call the existing close functionality
-    navigate("/"); // Navigate to the root path
+    navigate("/idreasy"); // Navigate to the home page
   };
 
   return (

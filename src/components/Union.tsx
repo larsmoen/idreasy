@@ -56,17 +56,17 @@ const Union: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
 
     layer1.data.features.forEach((feature1) => {
       layer2.data.features.forEach((feature2) => {
-        if (booleanIntersects(feature1, feature2)) {
-          if (isValidPolygonType(feature1) && isValidPolygonType(feature2)) {
-            const unionResult = union(
-              feature1.geometry as Polygon | MultiPolygon,
-              feature2.geometry as Polygon | MultiPolygon
-            );
-            if (unionResult) {
-              unionFeatureCollection.features.push(unionResult);
-            }
+        // if (booleanIntersects(feature1, feature2)) {
+        if (isValidPolygonType(feature1) && isValidPolygonType(feature2)) {
+          const unionResult = union(
+            feature1.geometry as Polygon | MultiPolygon,
+            feature2.geometry as Polygon | MultiPolygon
+          );
+          if (unionResult) {
+            unionFeatureCollection.features.push(unionResult);
           }
         }
+        // }
       });
     });
 

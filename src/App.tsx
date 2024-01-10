@@ -24,31 +24,31 @@ function App() {
         <ReactLeafletBaseMap />
         <section>
           <Routes>
-            <Route path="/" element={<React.Fragment />} />
+            <Route path="idreasy" element={<React.Fragment />} />
             <Route
-              path="load-data"
+              path="idreasy/load-data"
               element={<LoadData isOpen={isModalOpen} onClose={toggleModal} />}
             />
             <Route
-              path="union"
+              path="idreasy/union"
               element={<Union isOpen={isModalOpen} onClose={toggleModal} />}
             />
             <Route
-              path="feature-extraction"
+              path="idreasy/feature-extraction"
               element={
                 <FeatureExtractor isOpen={isModalOpen} onClose={toggleModal} />
               }
             />
             <Route
-              path="intersect"
+              path="idreasy/intersect"
               element={<Intersect isOpen={isModalOpen} onClose={toggleModal} />}
             />
             <Route
-              path="buffer"
+              path="idreasy/buffer"
               element={<Buffer isOpen={isModalOpen} onClose={toggleModal} />}
             />
             <Route
-              path="difference"
+              path="idreasy/difference"
               element={
                 <Difference isOpen={isModalOpen} onClose={toggleModal} />
               }
